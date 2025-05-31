@@ -23,6 +23,7 @@ jobs:
         sudo apt-get -qq update
         sudo apt-get install -y cmake lcov 
         sudo apt-get install -y libgtest-dev
+        sudo apt-get install libqt5core5a
       #  gcovr python3-pip
       #  pip install --user cpp-coveralls
       # sudo apt-get install -y cmake-data
@@ -43,7 +44,7 @@ jobs:
       #  sudo cp lib/* /usr/lib
 
     - name: Configure CMake
-      run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+      run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCMAKE_PREFIX_PATH=/usr/lib/qt5
       #run: |
         #cmake -B build -DCMAKE_BUILD_TYPE=${{ matrix.build-type }} -DBUILD_TESTS=ON
       # run: |
