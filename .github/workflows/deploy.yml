@@ -47,7 +47,7 @@ jobs:
         name: Release v1.${{ github.run_number }}
         files: build/*.deb
       env:
-        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     
 
