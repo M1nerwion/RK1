@@ -23,9 +23,9 @@ jobs:
         sudo apt-get -qq update
         sudo apt-get install -y cmake lcov 
         sudo apt-get install -y libgtest-dev
-        sudo apt-get install libqt5core5t64
         sudo apt-get install qtbase5-dev
         export CMAKE_PREFIX_PATH=/usr/lib/qt5
+      # sudo apt-get install libqt5core5t64
       #  gcovr python3-pip
       #  pip install --user cpp-coveralls
       # sudo apt-get install -y cmake-data
