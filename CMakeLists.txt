@@ -21,8 +21,13 @@ add_executable(main src/main.cpp)
 
 target_link_libraries(main State Qt5::Core) 
 
-
 add_subdirectory(tests)
+
+set(CPACK_PACKAGE_NAME "RK2_real2")
+set(CPACK_PACKAGE_VERSION "1.0.0")
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER "M1nerwion")
+set(CPACK_GENERATOR DEB)
+include(CPack)
 
 
 
